@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-export default (
+const handleRequest = (
   req: NextApiRequest,
   res: NextApiResponse
 ) => {
@@ -15,3 +15,5 @@ export default (
   }
   return res.status(405).json({ erro: 'Método informado não é válido' });
 }
+
+export default handleRequest;
